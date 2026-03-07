@@ -1,0 +1,903 @@
+/* ========================================
+   LATENT & MANIFEST — 胶片摄影系统官网
+   设计风格：极简 · 暗调 · 胶片美学
+   ======================================== */
+
+/* CSS Variables */
+:root {
+    /* 主色调 */
+    --color-bg: #0a0a0a;
+    --color-bg-secondary: #0f0f0f;
+    --color-bg-tertiary: #1a1a1a;
+    --color-surface: #141414;
+
+    /* 强调色 */
+    --color-accent: #8b0000;
+    --color-accent-light: #a50000;
+    --color-accent-dim: #4a0000;
+
+    /* 文字色 */
+    --color-text-primary: #f5f5f5;
+    --color-text-secondary: #888888;
+    --color-text-muted: #555555;
+
+    /* 边框色 */
+    --color-border: #2a2a2a;
+    --color-border-light: #3a3a3a;
+
+    /* 尺寸 */
+    --container-max: 1200px;
+    --section-padding: 120px;
+    --section-padding-mobile: 80px;
+
+    /* 动效 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.4s ease;
+    --transition-slow: 0.8s ease;
+    --transition-ritual: 0.8s ease-out;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* 隐藏滚动条但保留功能 (可选) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-light);
+}
+
+/* 工具类 */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding) 24px;
+    overflow: hidden;
+}
+
+.hero-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)'/%3E%3C/svg%3E");
+    animation: grainShift 8s steps(10) infinite;
+}
+
+@keyframes grainShift {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(5%, 5%); }
+    30% { transform: translate(-5%, 5%); }
+    40% { transform: translate(5%, -5%); }
+    50% { transform: translate(-5%, 0); }
+    60% { transform: translate(5%, 0); }
+    70% { transform: translate(0, 5%); }
+    80% { transform: translate(0, -5%); }
+    90% { transform: translate(5%, 5%); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+}
+
+.brand-mark {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.brand-l,
+.brand-m {
+    font-size: clamp(48px, 12vw, 120px);
+    font-weight: 200;
+    letter-spacing: -0.05em;
+    color: var(--color-text-primary);
+    opacity: 0;
+    animation: fadeInScale 1.2s ease forwards;
+}
+
+.brand-l {
+    animation-delay: 0.2s;
+}
+
+.brand-m {
+    animation-delay: 0.4s;
+    color: var(--color-text-secondary);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.title-line {
+    font-size: clamp(32px, 8vw, 72px);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.title-line:first-child {
+    animation-delay: 0.6s;
+}
+
+.title-line:last-child {
+    animation-delay: 0.8s;
+}
+
+.title-amp {
+    font-size: clamp(16px, 4vw, 24px);
+    font-weight: 300;
+    color: var(--color-text-muted);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.7s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1s;
+}
+
+.hero-tagline {
+    font-size: clamp(14px, 3vw, 16px);
+    color: var(--color-text-muted);
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.2s;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.4s;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    transition: all var(--transition-normal);
+    background: transparent;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--color-surface);
+    border-color: var(--color-border-light);
+}
+
+    background: transparent;
+    color: var(--color-text-primary);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.8s;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--color-text-muted), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+    50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ========================================
+   Section Base Styles
+   ======================================== */
+.section-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding: 8px 16px;
+    border: 1px solid var(--color-accent-dim);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: clamp(36px, 8vw, 56px);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    font-size: clamp(16px, 3vw, 20px);
+    color: var(--color-text-secondary);
+    font-weight: 300;
+}
+
+/* ========================================
+   LATENT Section
+   ======================================== */
+.app-section {
+    padding: var(--section-padding) 0;
+    background: var(--color-bg-secondary);
+}
+
+.app-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.app-showcase.reverse {
+    direction: rtl;
+}
+
+.app-showcase.reverse > * {
+    direction: ltr;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.feature {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    background: var(--color-surface);
+}
+
+.feature-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.feature:hover .feature-icon svg {
+    color: var(--color-accent);
+}
+
+.feature-content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.feature-content p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+/* Viewfinder Mockup */
+.app-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewfinder-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.viewfinder-frame {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.viewfinder-grid {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 32.5%, var(--color-border) 32.5%, var(--color-border) 33.5%, transparent 33.5%) 0 0 / 100% 100%,
+        linear-gradient(90deg, transparent 65.5%, var(--color-border) 65.5%, var(--color-border) 66.5%, transparent 66.5%) 0 0 / 100% 100%,
+        linear-gradient(transparent 32.5%, var(--color-border) 32.5%, var(--color-border) 33.5%, transparent 33.5%) 0 0 / 100% 100%,
+        linear-gradient(transparent 65.5%, var(--color-border) 65.5%, var(--color-border) 66.5%, transparent 66.5%) 0 0 / 100% 100%;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.viewfinder-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "SF Mono", "Monaco", "Consolas", monospace;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.1em;
+}
+
+.roll-name {
+    padding: 4px 8px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+}
+
+.frame-counter {
+    padding: 4px 8px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+}
+
+.shutter-button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 72px;
+    border: 2px solid var(--color-text-secondary);
+    border-radius: 50%;
+    background: transparent;
+    transition: all var(--transition-fast);
+}
+
+.shutter-button::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--color-text-muted);
+    border-radius: 50%;
+    background: var(--color-bg);
+}
+
+.shutter-button:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent-dim);
+}
+
+/* ========================================
+   MANIFEST Section
+   ======================================== */
+.manifest-section {
+    background: var(--color-bg);
+}
+
+/* Darkroom Mockup */
+.darkroom-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.safelight {
+    position: absolute;
+    top: 60px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: safelightPulse 4s ease-in-out infinite;
+}
+
+@keyframes safelightPulse {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+.developing-tray {
+    position: relative;
+    width: 280px;
+    height: 160px;
+    background: linear-gradient(180deg, var(--color-bg-tertiary) 0%, var(--color-bg) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.tray-liquid {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(139, 0, 0, 0.1) 0%, rgba(139, 0, 0, 0.05) 100%);
+    animation: liquidWave 3s ease-in-out infinite;
+}
+
+@keyframes liquidWave {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+.frame-slot {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 80px;
+    border: 1px dashed var(--color-border);
+    border-bottom: none;
+    border-radius: 2px 2px 0 0;
+    background: var(--color-bg-secondary);
+}
+
+.slot-1 { left: 20px; }
+.slot-2 { left: 110px; }
+.slot-3 { right: 20px; }
+
+.develop-timer {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.timer-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.timer-count {
+    font-family: "SF Mono", "Monaco", "Consolas", monospace;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+/* ========================================
+   Workflow Section
+   ======================================== */
+.workflow-section {
+    padding: var(--section-padding) 0;
+    background: var(--color-bg-secondary);
+}
+
+.workflow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.workflow-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color-border);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-slow);
+}
+
+.workflow-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.workflow-step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    font-family: "SF Mono", "Monaco", "Consolas", monospace;
+    letter-spacing: 0.1em;
+}
+
+.step-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.step-content p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.step-connector {
+    display: none;
+}
+
+/* ========================================
+   Download Section
+   ======================================== */
+.download-section {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+}
+
+.download-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.download-title {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.download-subtitle {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin-bottom: 48px;
+    font-weight: 300;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    background: var(--color-text-primary);
+    color: var(--color-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.download-btn:hover {
+    background: var(--color-text-secondary);
+    transform: scale(1.02);
+}
+
+.app-store-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.btn-text-small {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.btn-text-large {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.app-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.app-link:hover {
+    color: var(--color-accent);
+}
+
+.app-link-divider {
+    color: var(--color-border);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    padding: 60px 0;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.footer-l,
+.footer-m {
+    font-size: 32px;
+    font-weight: 200;
+    letter-spacing: -0.05em;
+    color: var(--color-text-muted);
+}
+
+.footer-text {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 992px) {
+    .app-showcase {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .app-showcase.reverse {
+        direction: ltr;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --section-padding: var(--section-padding-mobile);
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .brand-l,
+    .brand-m {
+        font-size: 56px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .workflow-step {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .step-number {
+        order: -1;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .app-link-divider {
+        display: none;
+    }
+
+    .darkroom-mockup {
+        max-width: 320px;
+    }
+
+    .viewfinder-mockup {
+        max-width: 320px;
+    }
+}
+
+/* ========================================
+   Animation Utilities
+   ======================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 胶片闪烁效果 */
+@keyframes filmFlicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+    52% { opacity: 1; }
+    54% { opacity: 0.9; }
+}
+
+.film-flicker {
+    animation: filmFlicker 4s ease-in-out infinite;
+}
