@@ -743,6 +743,11 @@ body {
     color: var(--color-text-secondary);
     text-decoration: none;
     transition: color var(--transition-fast);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
 }
 
 .app-link:hover {
