@@ -150,7 +150,6 @@ body {
 
 .brand-m {
     animation-delay: 0.4s;
-    color: var(--color-text-secondary);
 }
 
 @keyframes fadeInScale {
