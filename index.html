@@ -1,87 +1,117 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LATENT & MANIFEST — 胶片摄影系统</title>
+    <title>LATENT & MANIFEST — Analog Photography System</title>
+    <meta name="description" content="LATENT & MANIFEST — Complete analog photography experience. Shoot latent images, develop in the darkroom.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/LATN-B.png">
 </head>
 <body>
+    <!-- 全局胶片颗粒 -->
+    <div class="grain-overlay"></div>
+
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-grain"></div>
         <div class="hero-content">
-            <div class="brand-mark">
-                <span class="brand-l">L</span>
-                <span class="brand-m">M</span>
+            <div class="hero-icons">
+                <div class="hero-icon-wrapper">
+                    <img src="assets/images/LATN-W.png" alt="LATENT" class="hero-app-icon" />
+                </div>
+                <div class="hero-icon-connector">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </div>
+                <div class="hero-icon-wrapper">
+                    <img src="assets/images/MNFT-W.png" alt="MANIFEST" class="hero-app-icon" />
+                </div>
             </div>
+
             <h1 class="hero-title">
-                <span class="title-line">LATENT</span>
-                <span class="title-amp">&</span>
-                <span class="title-line">MANIFEST</span>
+                <span class="title-main" data-i18n="hero-title-main">TWO APPS. ONE DARKROOM.</span>
             </h1>
-            <p class="hero-subtitle" data-i18n="hero-subtitle">潜影 · 显影</p>
-            <p class="hero-tagline" data-i18n="hero-tagline">完整的胶片摄影数字体验</p>
-            <div class="hero-cta">
-                <a href="#latent" class="btn" data-i18n="btn-explore-latent">探索 LATENT</a>
-                <a href="#manifest" class="btn" data-i18n="btn-explore-manifest">探索 MANIFEST</a>
+
+            <div class="hero-brand-tags">
+                <span class="brand-tag brand-tag--latent">LATENT</span>
+                <span class="brand-tag-plus">+</span>
+                <span class="brand-tag brand-tag--manifest">MANIFEST</span>
             </div>
+
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Latent · Manifest</p>
+            <p class="hero-tagline" data-i18n="hero-tagline">Complete Analog Photography Experience</p>
+            <p class="hero-credit">Crafted with precision by LFP.</p>
         </div>
+
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
-            <span data-i18n="scroll-hint">向下滚动</span>
         </div>
     </section>
 
-    <!-- LATENT Section -->
-    <section class="app-section latent-section" id="latent">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="tag-capture">拍摄</span>
-                <h2 class="section-title">LATENT</h2>
-                <p class="section-subtitle" data-i18n="latent-subtitle">中画幅胶片相机体验</p>
+    <!-- Philosophy Section -->
+    <section class="section philosophy-section" id="philosophy">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar"></span>
+                <span class="label-text" data-i18n="label-philosophy">THE PHILOSOPHY</span>
             </div>
 
-            <div class="app-showcase">
-                <div class="app-description">
-                    <div class="feature-list">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <rect x="4" y="4" width="16" height="16" rx="2"/>
-                                    <line x1="12" y1="4" x2="12" y2="20"/>
-                                    <line x1="4" y1="12" x2="20" y2="12"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-square-title">1:1 方画幅</h3>
-                                <p data-i18n="feature-square-desc">经典 6×6 方画幅，12 张/卷</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <circle cx="12" cy="12" r="8"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-shutter-title">机械快门</h3>
-                                <p data-i18n="feature-shutter-desc">精确调校的触觉反馈，还原真实手感</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-latent-title">潜影存储</h3>
-                                <p data-i18n="feature-latent-desc">每张照片都是不可见的潜影，等待冲洗</p>
-                            </div>
+            <div class="philosophy-cards">
+                <div class="philosophy-card fade-in">
+                    <div class="philosophy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="phil-shoot-title">Shoot Blind</h3>
+                    <p data-i18n="phil-shoot-desc">LATENT simulates a real film camera. Every frame you shoot is saved as a latent image — sealed, invisible, just like real film. You can't preview what you've captured.</p>
+                </div>
+
+                <div class="philosophy-card fade-in">
+                    <div class="philosophy-icon philosophy-icon--red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+                            <path d="M19 3v4h-4"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="phil-develop-title">Develop in the Dark</h3>
+                    <p data-i18n="phil-develop-desc">MANIFEST is your digital darkroom. Load your exposed rolls, choose a film stock simulation, and develop. Only then do your photos emerge — with grain, tone, and character.</p>
+                </div>
+
+                <div class="philosophy-card fade-in">
+                    <div class="philosophy-icon philosophy-icon--warm">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="phil-anticipation-title">The Anticipation is the Point</h3>
+                    <p data-i18n="phil-anticipation-desc">The separation between shooting and seeing is intentional. It slows you down, makes each frame deliberate, and turns the reveal into a moment worth waiting for.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATENT App Section -->
+    <section class="section app-section" id="latent">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar label-bar--orange"></span>
+                <span class="label-text label-text--orange" data-i18n="label-capture">CAPTURE</span>
+            </div>
+
+            <div class="app-hero-row">
+                <div class="app-hero-info">
+                    <div class="app-hero-icon-row">
+                        <img src="assets/images/LATN-W.png" alt="LATENT" class="app-section-icon" />
+                        <div>
+                            <h2 class="app-hero-name">LATENT</h2>
+                            <p class="app-hero-role" data-i18n="latent-role">Film Camera</p>
                         </div>
                     </div>
+                    <p class="app-hero-desc" data-i18n="latent-desc">Simulates a Hasselblad medium-format film camera. Every frame is a latent image — invisible until developed in the darkroom.</p>
                 </div>
 
                 <div class="app-visual">
@@ -89,189 +119,283 @@
                         <div class="viewfinder-frame">
                             <div class="viewfinder-grid"></div>
                             <div class="viewfinder-info">
-                                <span class="roll-name">Roll 001</span>
-                                <span class="frame-counter">00/12</span>
+                                <span class="vf-label">Roll 001</span>
+                                <span class="vf-label">00/12</span>
                             </div>
-                            <div class="shutter-button"></div>
+                            <div class="viewfinder-center-mark"></div>
+                            <div class="shutter-btn-wrap">
+                                <div class="shutter-button"></div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-square-title">1:1 Square</h4>
+                    <p data-i18n="feat-square-desc">Classic 6×6 square ratio, 12 frames/roll</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-classic-title">2:3 Classic</h4>
+                    <p data-i18n="feat-classic-desc">35mm classic film, 36 frames/roll</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-shutter-title">Mechanical Shutter</h4>
+                    <p data-i18n="feat-shutter-desc">Precisely tuned haptic feedback for authentic feel</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-focal-title">Multi Focal Length</h4>
+                    <p data-i18n="feat-focal-desc">13mm · 24mm · 35mm · 50mm · TELE</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-latent-title">Latent Storage</h4>
+                    <p data-i18n="feat-latent-desc">Every photo is invisible until developed</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-exif-title">EXIF Metadata</h4>
+                    <p data-i18n="feat-exif-desc">Auto-records ISO, aperture, focal length, GPS</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MANIFEST Section -->
-    <section class="app-section manifest-section" id="manifest">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="tag-develop">冲洗</span>
-                <h2 class="section-title">MANIFEST</h2>
-                <p class="section-subtitle" data-i18n="manifest-subtitle">数字暗房冲洗体验</p>
+    <!-- MANIFEST App Section -->
+    <section class="section app-section app-section--dark" id="manifest">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar label-bar--red"></span>
+                <span class="label-text label-text--red" data-i18n="label-develop">DEVELOP</span>
             </div>
 
-            <div class="app-showcase reverse">
+            <div class="app-hero-row app-hero-row--reverse">
+                <div class="app-hero-info">
+                    <div class="app-hero-icon-row">
+                        <img src="assets/images/MNFT-W.png" alt="MANIFEST" class="app-section-icon" />
+                        <div>
+                            <h2 class="app-hero-name app-hero-name--red">MANIFEST</h2>
+                            <p class="app-hero-role" data-i18n="manifest-role">Digital Darkroom</p>
+                        </div>
+                    </div>
+                    <p class="app-hero-desc" data-i18n="manifest-desc">Your digital darkroom. Load exposed rolls, choose a film stock simulation, and develop frame by frame. Photos emerge under the red safelight.</p>
+                </div>
+
                 <div class="app-visual">
                     <div class="darkroom-mockup">
                         <div class="safelight"></div>
-                        <div class="developing-tray">
-                            <div class="tray-liquid"></div>
-                            <div class="frame-slot slot-1"></div>
-                            <div class="frame-slot slot-2"></div>
-                            <div class="frame-slot slot-3"></div>
-                        </div>
-                        <div class="develop-timer">
-                            <span class="timer-label">DEVELOPING</span>
-                            <span class="timer-count">3/12</span>
+                        <div class="darkroom-content">
+                            <div class="developing-tray">
+                                <div class="tray-liquid"></div>
+                                <div class="frame-slot"></div>
+                                <div class="frame-slot"></div>
+                                <div class="frame-slot"></div>
+                            </div>
+                            <div class="develop-timer">
+                                <span class="timer-label">DEVELOPING</span>
+                                <span class="timer-count">3/12</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="app-description">
-                    <div class="feature-list">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/>
-                                    <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"/>
-                                    <path d="M19 11h2m-1 -1v2"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-recipes-title">6 种冲洗配方</h3>
-                                <p data-i18n="feature-recipes-desc">暖调银盐、冷调铬版、褪色年代、交叉冲洗、经典黑白、电影青橙</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <rect x="2" y="2" width="20" height="20" rx="2"/>
-                                    <path d="M7 12h10"/>
-                                    <path d="M12 7v10"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-lut-title">自定义 LUT</h3>
-                                <p data-i18n="feature-lut-desc">支持 .cube 格式色彩查找表</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <rect x="2" y="2" width="20" height="20" rx="1"/>
-                                    <circle cx="6" cy="6" r="1.5" fill="currentColor"/>
-                                    <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
-                                    <circle cx="6" cy="18" r="1.5" fill="currentColor"/>
-                                    <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
-                                    <circle cx="12" cy="6" r="1.5" fill="currentColor"/>
-                                    <circle cx="12" cy="18" r="1.5" fill="currentColor"/>
-                                    <circle cx="6" cy="12" r="1.5" fill="currentColor"/>
-                                    <circle cx="18" cy="12" r="1.5" fill="currentColor"/>
-                                </svg>
-                            </div>
-                            <div class="feature-content">
-                                <h3 data-i18n="feature-gallery-title">胶片齿孔画廊</h3>
-                                <p data-i18n="feature-gallery-desc">独特的胶片风格展示，重现经典美学</p>
-                            </div>
-                        </div>
+            <div class="feature-grid">
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
                     </div>
+                    <h4 data-i18n="feat-recipes-title">Film Stock Recipes</h4>
+                    <p data-i18n="feat-recipes-desc">Portra 160NC · Pro 160S · Ultramax 400 and more</p>
+                </div>
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 12h10"/><path d="M12 7v10"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-lut-title">Custom CUBE LUT</h4>
+                    <p data-i18n="feat-lut-desc">Support for .cube color lookup tables, infinitely extensible</p>
+                </div>
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><circle cx="8" cy="14" r="2"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-gallery-title">Film Sprocket Gallery</h4>
+                    <p data-i18n="feat-gallery-desc">Unique film-strip aesthetic, classic beauty restored</p>
+                </div>
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-frame-title">Film Frame Export</h4>
+                    <p data-i18n="feat-frame-desc">Classic film frame overlay with full EXIF preservation</p>
+                </div>
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-ritual-title">Ritual Developing</h4>
+                    <p data-i18n="feat-ritual-desc">800ms per frame, pulsing safelight, darkroom ceremony</p>
+                </div>
+                <div class="feature-card feature-card--red fade-in">
+                    <div class="feature-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <h4 data-i18n="feat-export-title">Batch Export</h4>
+                    <p data-i18n="feat-export-desc">Save to Photos with original capture time and location</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section screenshots-section" id="screenshots">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar label-bar--red"></span>
+                <span class="label-text label-text--red" data-i18n="label-screenshots">SCREENSHOTS</span>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-item fade-in">
+                    <img src="assets/images/ManifestScreenshot1.png" alt="LATN - Shoot" class="screenshot-img" loading="lazy" />
+                    <span class="screenshot-caption" data-i18n="ss-caption-1">LATN - Shoot</span>
+                </div>
+                <div class="screenshot-item fade-in">
+                    <img src="assets/images/ManifestScreenshot2.png" alt="Film Rolls & Darkroom" class="screenshot-img" loading="lazy" />
+                    <span class="screenshot-caption" data-i18n="ss-caption-2">Film Rolls & Darkroom</span>
+                </div>
+                <div class="screenshot-item fade-in">
+                    <img src="assets/images/ManifestScreenshot3.png" alt="MNFT - Gallery" class="screenshot-img" loading="lazy" />
+                    <span class="screenshot-caption" data-i18n="ss-caption-3">MNFT - Gallery</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Workflow Section -->
-    <section class="workflow-section" id="workflow">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="workflow-title">拍摄流程</h2>
-                <p class="section-subtitle" data-i18n="workflow-subtitle">从拍摄到成像的完整体验</p>
+    <section class="section workflow-section" id="workflow">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar"></span>
+                <span class="label-text" data-i18n="label-workflow">HOW IT WORKS</span>
             </div>
 
-            <div class="workflow-steps">
-                <div class="workflow-step" data-step="1">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3 data-i18n="step1-title">装入胶卷</h3>
-                        <p data-i18n="step1-desc">在 LATENT 中选择画幅和胶卷容量</p>
+            <div class="workflow-timeline">
+                <div class="workflow-step fade-in">
+                    <div class="step-circle"><span>01</span></div>
+                    <div class="step-body">
+                        <h3 data-i18n="wf-step1-title">LOAD FILM</h3>
+                        <p data-i18n="wf-step1-desc">Create a roll in LATENT. Choose 6×6 square or 35mm classic format.</p>
                     </div>
-                    <div class="step-connector"></div>
                 </div>
-
-                <div class="workflow-step" data-step="2">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3 data-i18n="step2-title">拍摄潜影</h3>
-                        <p data-i18n="step2-desc">通过取景器构图，按下快门捕捉瞬间</p>
+                <div class="step-connector-line"></div>
+                <div class="workflow-step fade-in">
+                    <div class="step-circle"><span>02</span></div>
+                    <div class="step-body">
+                        <h3 data-i18n="wf-step2-title">SHOOT BLIND</h3>
+                        <p data-i18n="wf-step2-desc">Expose your frames. Every shot is sealed — invisible until developed, just like real film.</p>
                     </div>
-                    <div class="step-connector"></div>
                 </div>
-
-                <div class="workflow-step" data-step="3">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3 data-i18n="step3-title">选择配方</h3>
-                        <p data-i18n="step3-desc">在 MANIFEST 中选择冲洗配方和色彩风格</p>
+                <div class="step-connector-line"></div>
+                <div class="workflow-step fade-in">
+                    <div class="step-circle"><span>03</span></div>
+                    <div class="step-body">
+                        <h3 data-i18n="wf-step3-title">DEVELOP</h3>
+                        <p data-i18n="wf-step3-desc">Open MANIFEST, load your roll, choose a film stock, and develop. Your photos finally emerge.</p>
                     </div>
-                    <div class="step-connector"></div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="workflow-step" data-step="4">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3 data-i18n="step4-title">冲洗显影</h3>
-                        <p data-i18n="step4-desc">逐帧冲洗，见证潜影变为可见影像</p>
+    <!-- Privacy Section -->
+    <section class="section privacy-section" id="privacy">
+        <div class="container">
+            <div class="section-label">
+                <span class="label-bar label-bar--green"></span>
+                <span class="label-text label-text--green" data-i18n="label-privacy">PRIVACY</span>
+            </div>
+
+            <div class="privacy-cards">
+                <div class="privacy-card fade-in">
+                    <div class="privacy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                     </div>
-                    <div class="step-connector"></div>
+                    <h4 data-i18n="priv-device-title">100% On-Device</h4>
+                    <p data-i18n="priv-device-desc">All photos, film rolls, and developed images are stored locally on your device. Nothing is uploaded to any server.</p>
                 </div>
-
-                <div class="workflow-step" data-step="5">
-                    <div class="step-number">05</div>
-                    <div class="step-content">
-                        <h3 data-i18n="step5-title">收藏展示</h3>
-                        <p data-i18n="step5-desc">在胶片风格画廊中回顾作品</p>
+                <div class="privacy-card fade-in">
+                    <div class="privacy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     </div>
+                    <h4 data-i18n="priv-account-title">No Account Required</h4>
+                    <p data-i18n="priv-account-desc">Neither LATENT nor MANIFEST requires sign-in, registration, or any form of account. Your data belongs to you.</p>
+                </div>
+                <div class="privacy-card fade-in">
+                    <div class="privacy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    </div>
+                    <h4 data-i18n="priv-tracking-title">No Tracking</h4>
+                    <p data-i18n="priv-tracking-desc">We don't collect analytics, usage data, or any personal information. What you shoot stays between you and your camera.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section class="download-section" id="download">
-        <div class="section-container">
+    <section class="section download-section" id="download">
+        <div class="container">
             <div class="download-content">
-                <h2 class="download-title" data-i18n="download-title">开始你的胶片之旅</h2>
-                <p class="download-subtitle" data-i18n="download-subtitle">体验完整的数字胶片摄影流程</p>
-
-                <div class="download-buttons">
-                    <button class="download-btn" onclick="showComingSoonAlert()">
-                        <svg class="app-store-icon" viewBox="0 0 384 512" fill="currentColor">
-                            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
-                        </svg>
-                        <div class="btn-text">
-                            <span class="btn-text-small">Download on the</span>
-                            <span class="btn-text-large">App Store</span>
-                        </div>
-                    </button>
+                <div class="download-icons">
+                    <img src="assets/images/LATN-W.png" alt="LATENT" class="download-app-icon" />
+                    <img src="assets/images/MNFT-W.png" alt="MANIFEST" class="download-app-icon" />
                 </div>
 
-                <div class="app-links">
-                    <button class="app-link" onclick="showComingSoonAlert()">LATENT — <span data-i18n="link-camera">胶片相机</span></button>
-                    <span class="app-link-divider">/</span>
-                    <button class="app-link" onclick="showComingSoonAlert()">MANIFEST — <span data-i18n="link-darkroom">暗房</span></button>
-                </div>
+                <h2 class="download-title" data-i18n="download-title">Start Your Film Journey</h2>
+                <p class="download-subtitle" data-i18n="download-subtitle">LATENT & MANIFEST is coming soon. We're putting the finishing touches on the darkroom.</p>
+
+                <button class="download-btn" onclick="showComingSoonAlert()">
+                    <svg class="app-store-icon" viewBox="0 0 384 512" fill="currentColor">
+                        <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
+                    </svg>
+                    <div class="btn-text">
+                        <span class="btn-text-small">Download on the</span>
+                        <span class="btn-text-large">App Store</span>
+                    </div>
+                </button>
+
+                <p class="download-note" data-i18n="download-note">Stay tuned — launching very soon.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="section-container">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="footer-l">L</span>
-                    <span class="footer-m">M</span>
+                    <img src="assets/images/LATN-LD.png" alt="LATENT" class="footer-logo" />
+                    <span class="footer-divider">&</span>
+                    <img src="assets/images/MNFT-LD.png" alt="MANIFEST" class="footer-logo" />
                 </div>
-                <p class="footer-text">LATENT & MANIFEST — <span data-i18n="footer-text">胶片摄影系统</span></p>
+                <p class="footer-text">LATENT & MANIFEST — <span data-i18n="footer-text">Analog Photography System</span></p>
                 <p class="footer-copyright">&copy; 2026. Crafted with precision by LFP.</p>
             </div>
         </div>
@@ -282,98 +406,141 @@
         // 多语言配置
         const i18n = {
             'zh-CN': {
+                'hero-title-main': 'TWO APPS. ONE DARKROOM.',
                 'hero-subtitle': '潜影 · 显影',
                 'hero-tagline': '完整的胶片摄影数字体验',
-                'btn-explore-latent': '探索 LATENT',
-                'btn-explore-manifest': '探索 MANIFEST',
-                'scroll-hint': '向下滚动',
-                'tag-capture': '拍摄',
-                'latent-subtitle': '中画幅胶片相机体验',
-                'feature-square-title': '1:1 方画幅',
-                'feature-square-desc': '经典 6×6 方画幅，12 张/卷',
-                'feature-shutter-title': '机械快门',
-                'feature-shutter-desc': '精确调校的触觉反馈，还原真实手感',
-                'feature-latent-title': '潜影存储',
-                'feature-latent-desc': '每张照片都是不可见的潜影，等待冲洗',
-                'tag-develop': '冲洗',
-                'manifest-subtitle': '数字暗房冲洗体验',
-                'feature-recipes-title': '6 种冲洗配方',
-                'feature-recipes-desc': '暖调银盐、冷调铬版、褪色年代、交叉冲洗、经典黑白、电影青橙',
-                'feature-lut-title': '自定义 LUT',
-                'feature-lut-desc': '支持 .cube 格式色彩查找表',
-                'feature-gallery-title': '胶片齿孔画廊',
-                'feature-gallery-desc': '独特的胶片风格展示，重现经典美学',
-                'workflow-title': '拍摄流程',
-                'workflow-subtitle': '从拍摄到成像的完整体验',
-                'step1-title': '装入胶卷',
-                'step1-desc': '在 LATENT 中选择画幅和胶卷容量',
-                'step2-title': '拍摄潜影',
-                'step2-desc': '通过取景器构图，按下快门捕捉瞬间',
-                'step3-title': '选择配方',
-                'step3-desc': '在 MANIFEST 中选择冲洗配方和色彩风格',
-                'step4-title': '冲洗显影',
-                'step4-desc': '逐帧冲洗，见证潜影变为可见影像',
-                'step5-title': '收藏展示',
-                'step5-desc': '在胶片风格画廊中回顾作品',
+                'label-philosophy': '理念',
+                'phil-shoot-title': '盲拍',
+                'phil-shoot-desc': 'LATENT 模拟真实胶片相机。每一帧都被保存为潜影——密封、不可见，就像真正的胶片。你无法预览拍下的画面。',
+                'phil-develop-title': '暗房冲洗',
+                'phil-develop-desc': 'MANIFEST 是你的数字暗房。加载曝光的胶卷，选择胶片模拟配方，冲洗。照片才会显现——带着颗粒、色调和质感。',
+                'phil-anticipation-title': '期待即意义',
+                'phil-anticipation-desc': '拍摄与观看之间的分离是刻意的。它让你慢下来，让每一帧都变得审慎，让揭晓的瞬间值得等待。',
+                'label-capture': '拍摄',
+                'latent-role': '胶片相机',
+                'latent-desc': '模拟哈苏中画幅胶片相机。每一帧都是不可见的潜影，直到你在暗房中冲洗。',
+                'feat-square-title': '1:1 方画幅',
+                'feat-square-desc': '经典 6×6 方画幅，12 张/卷',
+                'feat-classic-title': '2:3 经典画幅',
+                'feat-classic-desc': '35mm 经典胶片，36 张/卷',
+                'feat-shutter-title': '机械快门',
+                'feat-shutter-desc': '精确调校的触觉反馈，还原真实手感',
+                'feat-focal-title': '多焦段切换',
+                'feat-focal-desc': '13mm · 24mm · 35mm · 50mm · TELE',
+                'feat-latent-title': '潜影存储',
+                'feat-latent-desc': '每张照片都是不可见的潜影，等待冲洗',
+                'feat-exif-title': 'EXIF 元数据',
+                'feat-exif-desc': '自动记录 ISO、光圈、焦距、GPS 坐标',
+                'label-develop': '冲洗',
+                'manifest-role': '数字暗房',
+                'manifest-desc': '你的数字暗房。加载曝光的胶卷，选择胶片模拟配方，逐帧冲洗。照片在暗红色安全灯下缓缓显现。',
+                'feat-recipes-title': '胶片模拟配方',
+                'feat-recipes-desc': 'Portra 160NC · Pro 160S · Ultramax 400 等经典胶片',
+                'feat-lut-title': '自定义 CUBE LUT',
+                'feat-lut-desc': '支持 .cube 格式色彩查找表，无限扩展',
+                'feat-gallery-title': '胶片齿孔画廊',
+                'feat-gallery-desc': '独特的胶片风格展示，重现经典美学',
+                'feat-frame-title': '胶片相框导出',
+                'feat-frame-desc': '经典胶片相框叠加，完整保留 EXIF 元数据',
+                'feat-ritual-title': '仪式感冲洗',
+                'feat-ritual-desc': '逐帧 800ms 间隔，安全灯脉动，还原暗房仪式',
+                'feat-export-title': '批量导出',
+                'feat-export-desc': '一键保存至系统相册，保留拍摄时间与位置',
+                'label-screenshots': '截图',
+                'ss-caption-1': 'LATN - Shoot',
+                'ss-caption-2': 'Film Rolls & Darkroom',
+                'ss-caption-3': 'MNFT - Gallery',
+                'label-workflow': '工作流程',
+                'wf-step1-title': '装入胶卷',
+                'wf-step1-desc': '在 LATENT 中创建一卷胶卷。选择 6×6 方画幅或 35mm 经典画幅。',
+                'wf-step2-title': '盲拍',
+                'wf-step2-desc': '曝光你的每一帧。每次按下快门都是密封的——不可见，直到冲洗，就像真正的胶片。',
+                'wf-step3-title': '冲洗',
+                'wf-step3-desc': '打开 MANIFEST，加载胶卷，选择胶片模拟配方，冲洗。你的照片终于显现。',
+                'label-privacy': '隐私',
+                'priv-device-title': '100% 本地处理',
+                'priv-device-desc': '所有照片、胶卷和冲洗结果都存储在你的设备上。没有任何数据上传到服务器。',
+                'priv-account-title': '无需注册',
+                'priv-account-desc': 'LATENT 和 MANIFEST 都不需要登录、注册或任何形式的账户。你的数据属于你。',
+                'priv-tracking-title': '无追踪',
+                'priv-tracking-desc': '我们不收集分析数据、使用数据或任何个人信息。你拍的照片只属于你和你的相机。',
                 'download-title': '开始你的胶片之旅',
-                'download-subtitle': '体验完整的数字胶片摄影流程',
-                'link-camera': '胶片相机',
-                'link-darkroom': '暗房',
+                'download-subtitle': 'LATENT & MANIFEST 即将上线。我们正在为暗房做最后的调试。',
+                'download-note': '敬请期待——即将发布。',
                 'footer-text': '胶片摄影系统',
                 'alert-message': '敬请期待！\nComing Soon...'
             },
             'en': {
+                'hero-title-main': 'TWO APPS. ONE DARKROOM.',
                 'hero-subtitle': 'Latent · Manifest',
                 'hero-tagline': 'Complete Analog Photography Experience',
-                'btn-explore-latent': 'Explore LATENT',
-                'btn-explore-manifest': 'Explore MANIFEST',
-                'scroll-hint': 'Scroll Down',
-                'tag-capture': 'Capture',
-                'latent-subtitle': 'Medium Format Camera Experience',
-                'feature-square-title': '1:1 Square Format',
-                'feature-square-desc': 'Classic 6×6 square ratio, 12 frames/roll',
-                'feature-shutter-title': 'Mechanical Shutter',
-                'feature-shutter-desc': 'Precisely tuned haptic feedback for authentic feel',
-                'feature-latent-title': 'Latent Image Storage',
-                'feature-latent-desc': 'Every photo is invisible until developed',
-                'tag-develop': 'Develop',
-                'manifest-subtitle': 'Digital Darkroom Developing Experience',
-                'feature-recipes-title': '6 Developing Recipes',
-                'feature-recipes-desc': 'Warm Silver, Cool Chrome, Vintage Fade, Cross Process, Classic B&W, Cinema Teal',
-                'feature-lut-title': 'Custom LUT',
-                'feature-lut-desc': 'Support for .cube format color lookup tables',
-                'feature-gallery-title': 'Film Sprocket Gallery',
-                'feature-gallery-desc': 'Unique film-strip aesthetic, classic beauty restored',
-                'workflow-title': 'Shooting Workflow',
-                'workflow-subtitle': 'Complete Experience from Capture to Print',
-                'step1-title': 'Load Film',
-                'step1-desc': 'Select format and roll capacity in LATENT',
-                'step2-title': 'Shoot Latent',
-                'step2-desc': 'Compose through viewfinder, press shutter to capture',
-                'step3-title': 'Select Recipe',
-                'step3-desc': 'Choose developing recipe and color grade in MANIFEST',
-                'step4-title': 'Develop',
-                'step4-desc': 'Frame by frame processing, watch latent images appear',
-                'step5-title': 'Gallery',
-                'step5-desc': 'Review your work in the film-strip styled gallery',
+                'label-philosophy': 'THE PHILOSOPHY',
+                'phil-shoot-title': 'Shoot Blind',
+                'phil-shoot-desc': 'LATENT simulates a real film camera. Every frame you shoot is saved as a latent image — sealed, invisible, just like real film. You can\'t preview what you\'ve captured.',
+                'phil-develop-title': 'Develop in the Dark',
+                'phil-develop-desc': 'MANIFEST is your digital darkroom. Load your exposed rolls, choose a film stock simulation, and develop. Only then do your photos emerge — with grain, tone, and character.',
+                'phil-anticipation-title': 'The Anticipation is the Point',
+                'phil-anticipation-desc': 'The separation between shooting and seeing is intentional. It slows you down, makes each frame deliberate, and turns the reveal into a moment worth waiting for.',
+                'label-capture': 'CAPTURE',
+                'latent-role': 'Film Camera',
+                'latent-desc': 'Simulates a Hasselblad medium-format film camera. Every frame is a latent image — invisible until developed in the darkroom.',
+                'feat-square-title': '1:1 Square',
+                'feat-square-desc': 'Classic 6×6 square ratio, 12 frames/roll',
+                'feat-classic-title': '2:3 Classic',
+                'feat-classic-desc': '35mm classic film, 36 frames/roll',
+                'feat-shutter-title': 'Mechanical Shutter',
+                'feat-shutter-desc': 'Precisely tuned haptic feedback for authentic feel',
+                'feat-focal-title': 'Multi Focal Length',
+                'feat-focal-desc': '13mm · 24mm · 35mm · 50mm · TELE',
+                'feat-latent-title': 'Latent Storage',
+                'feat-latent-desc': 'Every photo is invisible until developed',
+                'feat-exif-title': 'EXIF Metadata',
+                'feat-exif-desc': 'Auto-records ISO, aperture, focal length, GPS',
+                'label-develop': 'DEVELOP',
+                'manifest-role': 'Digital Darkroom',
+                'manifest-desc': 'Your digital darkroom. Load exposed rolls, choose a film stock simulation, and develop frame by frame. Photos emerge under the red safelight.',
+                'feat-recipes-title': 'Film Stock Recipes',
+                'feat-recipes-desc': 'Portra 160NC · Pro 160S · Ultramax 400 and more',
+                'feat-lut-title': 'Custom CUBE LUT',
+                'feat-lut-desc': 'Support for .cube color lookup tables, infinitely extensible',
+                'feat-gallery-title': 'Film Sprocket Gallery',
+                'feat-gallery-desc': 'Unique film-strip aesthetic, classic beauty restored',
+                'feat-frame-title': 'Film Frame Export',
+                'feat-frame-desc': 'Classic film frame overlay with full EXIF preservation',
+                'feat-ritual-title': 'Ritual Developing',
+                'feat-ritual-desc': '800ms per frame, pulsing safelight, darkroom ceremony',
+                'feat-export-title': 'Batch Export',
+                'feat-export-desc': 'Save to Photos with original capture time and location',
+                'label-screenshots': 'SCREENSHOTS',
+                'ss-caption-1': 'LATN - Shoot',
+                'ss-caption-2': 'Film Rolls & Darkroom',
+                'ss-caption-3': 'MNFT - Gallery',
+                'label-workflow': 'HOW IT WORKS',
+                'wf-step1-title': 'LOAD FILM',
+                'wf-step1-desc': 'Create a roll in LATENT. Choose 6×6 square or 35mm classic format.',
+                'wf-step2-title': 'SHOOT BLIND',
+                'wf-step2-desc': 'Expose your frames. Every shot is sealed — invisible until developed, just like real film.',
+                'wf-step3-title': 'DEVELOP',
+                'wf-step3-desc': 'Open MANIFEST, load your roll, choose a film stock, and develop. Your photos finally emerge.',
+                'label-privacy': 'PRIVACY',
+                'priv-device-title': '100% On-Device',
+                'priv-device-desc': 'All photos, film rolls, and developed images are stored locally on your device. Nothing is uploaded to any server.',
+                'priv-account-title': 'No Account Required',
+                'priv-account-desc': 'Neither LATENT nor MANIFEST requires sign-in, registration, or any form of account. Your data belongs to you.',
+                'priv-tracking-title': 'No Tracking',
+                'priv-tracking-desc': 'We don\'t collect analytics, usage data, or any personal information. What you shoot stays between you and your camera.',
                 'download-title': 'Start Your Film Journey',
-                'download-subtitle': 'Experience the Complete Digital Analog Photography Process',
-                'link-camera': 'Camera',
-                'link-darkroom': 'Darkroom',
+                'download-subtitle': 'LATENT & MANIFEST is coming soon. We\'re putting the finishing touches on the darkroom.',
+                'download-note': 'Stay tuned — launching very soon.',
                 'footer-text': 'Analog Photography System',
                 'alert-message': 'Coming Soon...'
             }
         };
 
-        // 检测浏览器语言并应用
         function applyLanguage() {
             const userLang = navigator.language || navigator.userLanguage;
             const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
-
-            // 设置 HTML lang 属性
             document.documentElement.lang = lang;
-
-            // 更新所有带 data-i18n 属性的元素
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (i18n[lang][key]) {
@@ -382,10 +549,8 @@
             });
         }
 
-        // 页面加载时应用语言
         applyLanguage();
 
-        // 显示敬请期待提示
         function showComingSoonAlert() {
             const userLang = navigator.language || navigator.userLanguage;
             const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
