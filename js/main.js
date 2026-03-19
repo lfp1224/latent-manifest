@@ -66,19 +66,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mockup) darkroomObs.observe(mockup);
     }
 
-    // Screenshot lightbox
+    // Screenshot lightbox with lazy loading
     document.querySelectorAll('.screenshot-img').forEach(img => {
         img.addEventListener('click', () => {
+            const fullSrc = img.dataset.full;
             const overlay = document.createElement('div');
+            overlay.className = 'lightbox-overlay';
             overlay.style.cssText = `
                 position:fixed;inset:0;z-index:10000;
                 background:rgba(0,0,0,0.92);
                 display:flex;align-items:center;justify-content:center;
                 cursor:pointer;animation:fadeIn 0.25s ease;
             `;
-            const clone = img.cloneNode();
-            clone.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;';
-            overlay.appendChild(clone);
+
+            // Loading spinner
+            const loader = document.createElement('div');
+            loader.className = 'lightbox-loader';
+            loader.innerHTML = `
+                <div class="loader-ring"></div>
+                <span class="loader-text">Loading...</span>
+            `;
+            loader.style.cssText = `
+                display:flex;flex-direction:column;align-items:center;gap:12px;
+            `;
+            overlay.appendChild(loader);
+
+            const fullImg = new Image();
+            fullImg.className = 'lightbox-full-img';
+            fullImg.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;opacity:0;transition:opacity 0.3s ease;';
+
+            fullImg.onload = () => {
+                loader.remove();
+                overlay.appendChild(fullImg);
+                requestAnimationFrame(() => fullImg.style.opacity = '1');
+            };
+
+            fullImg.src = fullSrc;
             overlay.addEventListener('click', () => overlay.remove());
             document.body.appendChild(overlay);
         });
@@ -90,6 +113,27 @@ document.addEventListener('DOMContentLoaded', () => {
         @keyframes focusPulse {
             0% { opacity:1; transform:scale(0.7); }
             100% { opacity:0; transform:scale(1.3); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .loader-ring {
+            width: 32px;
+            height: 32px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-top-color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .loader-text {
+            font-family: "SF Mono", Monaco, Consolas, monospace;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 1px;
         }
     `;
     document.head.appendChild(style);

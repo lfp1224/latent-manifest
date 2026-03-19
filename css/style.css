@@ -977,8 +977,8 @@ body {
     }
 
     .screenshots-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
 
     .viewfinder-mockup,
