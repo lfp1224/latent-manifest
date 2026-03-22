@@ -1012,6 +1012,15 @@ body {
     color: var(--color-text-muted);
 }
 
+.footer-copyright .app-tag {
+    font-size: 10px;
+    padding: 2px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
 /* ========================================
    Animations
    ======================================== */
