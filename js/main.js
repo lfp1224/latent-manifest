@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const fullImg = new Image();
             fullImg.className = 'lightbox-full-img';
-            fullImg.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;opacity:0;transition:opacity 0.3s ease;';
+            fullImg.style.cssText = 'max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;opacity:0;transition:opacity 0.3s ease;border:2px solid rgba(255,255,255,0.15);';
 
             fullImg.onload = () => {
                 loader.remove();
