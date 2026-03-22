@@ -642,10 +642,10 @@ body {
 }
 
 /* ========================================
-   Screenshots Section
+   App Section Screenshots
    ======================================== */
-.screenshots-section {
-    background: var(--color-bg-alt);
+.app-screenshots {
+    margin-top: 48px;
 }
 
 .screenshots-app-title {
