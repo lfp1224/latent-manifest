@@ -838,6 +838,35 @@ body {
     background: var(--color-bg-alt);
 }
 
+.privacy-learn-more {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-green);
+    text-decoration: none;
+    padding: 6px 14px;
+    background: var(--color-green-dim);
+    border: 1px solid rgba(52, 199, 89, 0.3);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.privacy-learn-more:hover {
+    background: rgba(52, 199, 89, 0.25);
+    transform: translateX(2px);
+}
+
+@media (max-width: 640px) {
+    .section-label {
+        flex-wrap: wrap;
+    }
+
+    .privacy-learn-more {
+        margin-left: 22px;
+        margin-top: 8px;
+    }
+}
+
 .privacy-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
