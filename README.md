@@ -24,9 +24,9 @@ website/
         ├── LATN-W.png          # LATENT App Icon (白底)
         ├── LATN-LD.png         # LATENT Launch Logo
         ├── LATN-AU.png         # LATENT Launch Icon
-        ├── MNFT-B.png          # MANIFEST App Icon (黑底)
-        ├── MNFT-W.png          # MANIFEST App Icon (白底)
-        ├── MNFT-LD.png         # MANIFEST Launch Logo
+        ├── MNFS-B.png          # MANIFEST App Icon (黑底)
+        ├── MNFS-W.png          # MANIFEST App Icon (白底)
+        ├── MNFS-LD.png         # MANIFEST Launch Logo
         ├── ManifestScreenshot1-3.png  # MANIFEST 截图
         └── frame_classic_1x1.png     # 胶片相框素材
 ```
