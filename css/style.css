@@ -919,36 +919,15 @@ body {
 
 .download-content {
     text-align: center;
-    max-width: 480px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.download-icons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 32px;
-}
-
-.download-app-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    border: 1px solid var(--color-surface-border);
-}
-
 .download-title {
-    font-size: clamp(20px, 5vw, 28px);
+    font-size: clamp(24px, 5vw, 32px);
     font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-}
-
-.download-subtitle {
-    font-size: 13px;
-    color: var(--color-text-secondary);
-    margin-bottom: 32px;
-    line-height: 1.7;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 
 .download-btn {
@@ -990,6 +969,53 @@ body {
 .btn-text-large {
     font-size: 16px;
     font-weight: 600;
+}
+
+/* Two download buttons row */
+.download-apps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    margin: 40px 0;
+}
+
+.download-app-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+}
+
+.download-showcase-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.download-showcase-name {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-text-primary);
+    margin-top: 4px;
+}
+
+.download-showcase-role {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
+}
+
+.download-divider-vertical {
+    width: 1px;
+    height: 140px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.2), transparent);
+    align-self: center;
 }
 
 .download-note {
@@ -1139,5 +1165,27 @@ body {
     .download-btn {
         width: 100%;
         justify-content: center;
+        max-width: 280px;
+    }
+
+    .download-apps-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .download-divider-vertical {
+        width: 100px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    }
+
+    .download-showcase-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+    }
+
+    .download-showcase-role {
+        margin-bottom: 12px;
     }
 }
