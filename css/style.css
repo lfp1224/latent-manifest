@@ -942,6 +942,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     margin-bottom: 16px;
+    text-decoration: none;
 }
 
 .download-btn:hover {
