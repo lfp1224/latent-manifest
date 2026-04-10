@@ -933,8 +933,8 @@ body {
 .download-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 14px 28px;
+    gap: 10px;
+    padding: 10px 20px;
     background: #f5f5f5;
     color: #000;
     border: none;
@@ -951,8 +951,8 @@ body {
 }
 
 .app-store-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 .btn-text {
