@@ -156,20 +156,39 @@ body {
 
 @media (max-width: 480px) {
     .hero-brand-tags {
-        gap: 6px;
+        gap: 4px;
+        width: 100%;
+        justify-content: center;
     }
     .hero-brand-tags .brand-tag {
-        font-size: 10px;
-        letter-spacing: 2px;
+        font-size: 9px;
+        letter-spacing: 1px;
     }
     .hero-brand-tags .brand-tag-plus {
-        font-size: 10px;
+        font-size: 9px;
+    }
+    .hero-tagline-merged {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-brand-tags .brand-tag,
+    .hero-brand-tags .brand-tag-plus,
+    .hero-tagline-merged {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+    .hero-brand-tags {
+        gap: 3px;
     }
 }
 
 .hero-tagline-merged {
     color: rgba(255,255,255,0.9);
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 .brand-tag {
