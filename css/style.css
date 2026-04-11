@@ -141,10 +141,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
     margin-bottom: 32px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.6s;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.hero-brand-tags .brand-tag,
+.hero-brand-tags .brand-tag-plus {
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .hero-brand-tags {
+        gap: 6px;
+    }
+    .hero-brand-tags .brand-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+    .hero-brand-tags .brand-tag-plus {
+        font-size: 10px;
+    }
 }
 
 .hero-tagline-merged {
