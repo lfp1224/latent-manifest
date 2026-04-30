@@ -318,6 +318,7 @@ body {
 .label-text--orange { color: rgba(255,149,0,0.8); }
 .label-text--red { color: rgba(217,56,50,0.8); }
 .label-text--green { color: rgba(52,199,89,0.8); }
+.label-text--white { color: rgba(255,255,255,0.9); text-transform: uppercase; }
 
 /* ========================================
    Philosophy Section
