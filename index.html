@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LATENT & MANIFEST — Analog Photography System</title>
+    <title>LATN FILM & MNFS FILM - Complete Film Emulation</title>
     <meta name="description" content="LATENT & MANIFEST — Complete analog photography experience. Shoot latent images, develop in the darkroom.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/jpeg" href="assets/images/LATN-B.jpg">
@@ -55,9 +55,9 @@
             </h1>
 
             <div class="hero-brand-tags">
-                <span class="brand-tag brand-tag--latent">LATENT</span>
-                <span class="brand-tag-plus">+</span>
-                <span class="brand-tag brand-tag--manifest">MANIFEST</span>
+                <span class="brand-tag brand-tag--latent">LATN FILM</span>
+                <span class="brand-tag-plus">&</span>
+                <span class="brand-tag brand-tag--manifest">MNFS FILM</span>
                 <span class="brand-tag-plus">=</span>
                 <span class="brand-tag hero-tagline-merged" data-i18n="hero-tagline">TWO APPS. ONE DARKROOM.</span>
             </div>
@@ -428,7 +428,7 @@
                     <img src="assets/images/MNFS-LD.jpg" alt="MANIFEST" class="footer-logo" />
                 </div>
                 <p class="footer-text">LATN & MNFS FILM — <span data-i18n="footer-text">Analog Photography System</span></p>
-                <p class="footer-copyright">&copy; 2026. Crafted with precision by <a href="https://xhslink.com/m/6R2pUaW3pdJ" target="_blank" rel="noopener noreferrer" class="app-tag app-tag--manifest">Leaf.LFP</a></p>
+                <p class="footer-copyright">&copy; 2026. Crafted with precision by LFP</p>
             </div>
         </div>
     </footer>
@@ -438,6 +438,7 @@
         // 多语言配置
         const i18n = {
             'zh-CN': {
+                'page-title': 'LATN FILM & MNFS FILM - 完整模拟胶片摄影的体验',
                 'hero-title-main': '完整的胶片摄影数字体验',
                 'hero-subtitle': '潜影 · 显影',
                 'hero-tagline': 'TWO APPS. ONE DARKROOM.',
@@ -492,8 +493,8 @@
                 'alert-message': '敬请期待！\nComing Soon...'
             },
             'en': {
-                'hero-title-main': 'Complete Analog Photography Experience',
-                'hero-subtitle': 'Latent · Manifest',
+                'page-title': 'LATN FILM & MNFS FILM - Complete Film Emulation',
+                'hero-title-main': 'Complete Film Emulation',
                 'hero-tagline': 'TWO APPS. ONE DARKROOM.',
                 'label-philosophy': 'THE PHILOSOPHY',
                 'phil-shoot-title': 'No More Shutter Anxiety',
@@ -548,9 +549,21 @@
         };
 
         function applyLanguage() {
+            // Check URL parameter first, then fall back to browser language
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
             const userLang = navigator.language || navigator.userLanguage;
-            const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
+            let lang;
+            if (urlLang === 'en' || urlLang === 'zh') {
+                lang = urlLang === 'zh' ? 'zh-CN' : 'en';
+            } else {
+                lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
+            }
             document.documentElement.lang = lang;
+            // Update page title based on language
+            if (i18n[lang]['page-title']) {
+                document.title = i18n[lang]['page-title'];
+            }
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (i18n[lang][key]) {
