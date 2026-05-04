@@ -899,7 +899,7 @@ body {
    Privacy Section
    ======================================== */
 .privacy-section {
-    background: var(--color-bg-alt);
+    background: var(--color-bg);
 }
 
 .privacy-learn-more {
