@@ -842,64 +842,57 @@ body {
     background: rgba(255,255,255,0.2);
 }
 
-/* ========================================
-   Workflow Section
-   ======================================== */
-.workflow-section {
-    background: var(--color-bg);
-}
+/* ========================================   Workflow Section   ======================================== */.workflow-section {    background: var(--color-bg);}
 
-.workflow-timeline {
+.workflow-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     padding: 24px;
     background: var(--color-surface);
     border: 1px solid var(--color-surface-border);
     border-radius: 12px;
 }
 
-.workflow-step {
+.workflow-card {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
 }
 
-.step-circle {
+.workflow-icon {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--color-orange-dim);
-    border: 1px solid var(--color-orange-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.step-circle span {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    font-weight: 700;
+    width: 20px;
+    height: 20px;
     color: var(--color-orange);
 }
 
-.step-body h3 {
+.workflow-icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.workflow-card h3 {
     font-family: var(--font-mono);
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.5px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    color: var(--color-text);
 }
 
-.step-body p {
+.workflow-card p {
     font-size: 12px;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.step-connector-line {
-    width: 1px;
-    height: 28px;
-    background: rgba(255,149,0,0.25);
-    margin-left: 17px;
+.workflow-cards .divider-line {
+    height: 1px;
+    background: var(--color-divider);
+    margin: 16px 0;
 }
 
 /* ========================================
