@@ -926,7 +926,6 @@ body {
 @media (max-width: 640px) {
     .section-label {
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     .privacy-learn-more {
@@ -937,7 +936,7 @@ body {
 
 .privacy-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
