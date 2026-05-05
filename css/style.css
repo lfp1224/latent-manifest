@@ -977,24 +977,6 @@ body {
     line-height: 1.7;
 }
 
-/* 单卡片全宽布局 */
-.privacy-card--full {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 32px;
-}
-
-.privacy-card--full h4 {
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.privacy-card--full p {
-    font-size: 14px;
-    max-width: 480px;
-    margin: 0 auto;
-}
-
 /* ========================================
    Download Section
    ======================================== */
