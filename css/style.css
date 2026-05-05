@@ -121,6 +121,9 @@ body {
 
 .hero-icon-connector {
     color: rgba(255,255,255,0.2);
+    align-self: center;
+    display: flex;
+    align-items: center;
 }
 
 .hero-title {
@@ -923,10 +926,11 @@ body {
 @media (max-width: 640px) {
     .section-label {
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .privacy-learn-more {
-        margin-left: 22px;
+        margin-left: auto;
         margin-top: 8px;
     }
 }

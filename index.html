@@ -43,9 +43,10 @@
                     <img src="assets/images/LATN-W.jpg" alt="LATENT" class="hero-app-icon" />
                 </div>
                 <div class="hero-icon-connector">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <line x1="5" y1="12" x2="19" y2="12"/>
-                        <polyline points="12 5 19 12 12 19"/>
+                    <svg width="32" height="24" viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <line x1="4" y1="12" x2="28" y2="12"/>
+                        <polyline points="20 6 28 12 20 18"/>
+                        <polyline points="12 6 4 12 12 18"/>
                     </svg>
                 </div>
                 <div class="hero-icon-wrapper">
@@ -186,7 +187,7 @@
         <div class="container">
             <div class="section-label">
                 <span class="label-bar label-bar--green"></span>
-                <span class="label-text label-text--green" data-i18n="label-privacy">PRIVACY</span>
+                <span class="label-text label-text--white" data-i18n="label-privacy">PRIVACY</span>
                 <a href="privacy.html" class="privacy-learn-more" data-i18n="privacy-learn-more">了解更多 →</a>
             </div>
 
@@ -226,7 +227,7 @@
                     <div class="download-app-column">
                         <img src="assets/images/LATN-W.jpg" alt="LATN" class="download-showcase-icon" />
                         <span class="download-showcase-name">LATN FILM</span>
-                        <span class="download-showcase-role">Film Camera</span>
+                        <span class="download-showcase-role" data-i18n="latn-role">Film Camera</span>
                         <div class="download-btn-wrap">
                             <a href="https://apps.apple.com/us/app/latn-film/id6760212858" target="_blank" rel="noopener noreferrer" class="download-btn" data-download>
                                 <svg class="app-store-icon" viewBox="0 0 384 512" fill="currentColor">
@@ -244,7 +245,7 @@
                     <div class="download-app-column">
                         <img src="assets/images/MNFS-W.jpg" alt="MNFS" class="download-showcase-icon" />
                         <span class="download-showcase-name">MNFS FILM</span>
-                        <span class="download-showcase-role">Digital Darkroom</span>
+                        <span class="download-showcase-role" data-i18n="mnfs-role">Digital Darkroom</span>
                         <div class="download-btn-wrap">
                             <a href="https://apps.apple.com/us/app/mnfs-film/id6760181384" target="_blank" rel="noopener noreferrer" class="download-btn" data-download>
                                 <svg class="app-store-icon" viewBox="0 0 384 512" fill="currentColor">
@@ -267,10 +268,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/LATN-LD.jpg" alt="LATENT" class="footer-logo" />
-                    <img src="assets/images/MNFS-LD.jpg" alt="MANIFEST" class="footer-logo" />
-                </div>
                 <p class="footer-copyright">&copy; 2026. Crafted with precision by LFP</p>
             </div>
         </div>
@@ -286,29 +283,31 @@
                 'hero-subtitle': '潜影 · 显影',
                 'hero-tagline': 'TWO APPS. ONE DARKROOM.',
                 'label-philosophy': '设计理念',
-                'phil-shoot-title': '延迟满足',
-                'phil-shoot-desc': '照片拍完先藏着，冲洗后才看得到。这种拍和看之间的间隔，让人少盯着屏幕，多在真实的当下里。没有重来，不用纠结——按下快门，就是治愈快门焦虑的开始。',
+                'latn-role': '胶片相机',
+                'mnfs-role': '数字暗房',
+                'phil-shoot-title': '治愈快门焦虑',
+                'phil-shoot-desc': '照片拍完先藏着，冲洗后才看得到。这种拍和看的间隔，让人少盯着屏幕，多关注的当下生活。',
                 'phil-develop-title': '观察与记录',
-                'phil-develop-desc': '一卷胶卷可以拍任何东西——晨光、雨天、街猫、咖啡馆。张数有限，每按一次快门都更珍贵。慢下来，看得更细，记得更牢。',
+                'phil-develop-desc': '一卷胶卷可以拍任何主题——光影、雨天、街猫、咖啡馆、旅行，收集生活的各种瞬间。',
                 'phil-anticipation-title': '仪式感与惊喜',
-                'phil-anticipation-desc': '当照片在暗房中缓缓显现，这是属于你的冲洗仪式。独特设计的看片台放大体验，让你近距离欣赏每一张照片的光影细节，还原那份属于胶片的震撼与感动。',
+                'phil-anticipation-desc': '当照片在暗房中缓缓显现，充满仪式感。精心设计的看片台，可以放大欣赏每一张照片的光影细节。',
                 'feat-subscription-title': '无限胶卷',
                 'feat-subscription-desc': '超值年费订阅，无限胶卷，无隐藏收费',
                 'label-workflow': '拍摄和冲洗',
                 'wf-step1-title': '装入胶卷',
                 'wf-step1-desc': '在 LATN 新建胶卷，选择 1:1 方幅或 2:3 经典画幅。',
                 'wf-step2-title': '拍摄记录',
-                'wf-step2-desc': '拍摄画面。每张照片都是密封的——冲洗前不可见，就像真实胶卷。',
+                'wf-step2-desc': '尽情拍摄，每张照片在冲洗前都是暂时密封的，就像真实胶卷。',
                 'wf-step3-title': '冲洗导出',
                 'wf-step3-desc': '打开 MNFS，选择胶片配方，冲洗并导出到相册。',
                 'label-privacy': '隐私',
                 'privacy-learn-more': '了解更多 →',
                 'priv-device-title': '100% 本地处理',
-                'priv-device-desc': '所有照片、胶卷和冲洗结果都存储在你的设备上。没有任何数据上传到服务器。',
+                'priv-device-desc': '所有数据只存储在你的设备上，不会上传到任何服务器。',
                 'priv-account-title': '无需注册',
-                'priv-account-desc': 'LATN 和 MNFS 都不需要登录、注册或任何形式的账户。你的数据属于你。',
+                'priv-account-desc': '不需要登录、注册或任何形式的账户。',
                 'priv-tracking-title': '无追踪',
-                'priv-tracking-desc': '我们不收集分析数据、使用数据或任何个人信息。你拍的照片只属于你和你的相机。',
+                'priv-tracking-desc': '不收集任何分析数据或使用数据，你的照片只属于你。',
                 'download-title': '开始你的胶片之旅',
                 'download-subtitle': '',
                 'download-note': '敬请期待——即将发布。',
@@ -320,29 +319,31 @@
                 'hero-title-main': 'Complete Film Emulation',
                 'hero-tagline': 'TWO APPS. ONE DARKROOM.',
                 'label-philosophy': 'THE PHILOSOPHY',
-                'phil-shoot-title': 'Delayed Gratification',
-                'phil-shoot-desc': 'Photos stay hidden until developed. The gap between shooting and seeing means less time staring at the screen, more time in the actual moment. No retakes, no second-guessing — just commit to the shot.',
+                'latn-role': 'Film Camera',
+                'mnfs-role': 'Digital Darkroom',
+                'phil-shoot-title': 'Cure Shutter Anxiety',
+                'phil-shoot-desc': 'Photos stay hidden until developed. The gap between shooting and seeing means less screen time, more presence in daily life.',
                 'phil-develop-title': 'Observe & Record',
-                'phil-develop-desc': 'A roll can be about anything — morning light, rainy days, street cats, coffee shops. Limited frames mean every shot counts. Slow down, notice more, remember.',
+                'phil-develop-desc': 'A roll can be about any subject — light and shadow, rainy days, street cats, coffee shops, travel. Collecting the little moments of life.',
                 'phil-anticipation-title': 'Ritual & Surprise',
-                'phil-anticipation-desc': 'As photos slowly emerge in the darkroom, this is your own developing ritual. The uniquely designed light table experience lets you closely appreciate the light and shadow details of every photo, restoring the awe and emotion that belong to film.',
+                'phil-anticipation-desc': 'As photos slowly emerge in the darkroom, the moment is full of ritual. The carefully designed light table lets you zoom in and appreciate the light and shadow details of every photo.',
                 'feat-subscription-title': 'Unlimited Rolls',
                 'feat-subscription-desc': 'One affordable yearly plan. No hidden fees, no limits.',
                 'label-workflow': 'SHOOT & DEVELOP',
                 'wf-step1-title': 'LOAD FILM',
                 'wf-step1-desc': 'Create a roll in LATN. Choose 1:1 square or 2:3 classic format.',
                 'wf-step2-title': 'SHOOT & RECORD',
-                'wf-step2-desc': 'Expose your frames. Every shot is sealed — invisible until developed, just like real film.',
+                'wf-step2-desc': 'Shoot freely. Every photo is temporarily sealed before developing, just like real film.',
                 'wf-step3-title': 'DEVELOP & EXPORT',
                 'wf-step3-desc': 'Open MNFS, choose a film stock, and develop. Export and save to your library.',
                 'label-privacy': 'PRIVACY',
                 'privacy-learn-more': 'Learn More →',
                 'priv-device-title': '100% On-Device',
-                'priv-device-desc': 'All photos, film rolls, and developed images are stored locally on your device. Nothing is uploaded to any server.',
+                'priv-device-desc': 'All data stays on your device. Nothing is uploaded.',
                 'priv-account-title': 'No Account Required',
-                'priv-account-desc': 'Neither LATN nor MNFS requires sign-in, registration, or any form of account. Your data belongs to you.',
+                'priv-account-desc': 'No sign-in, registration, or account required.',
                 'priv-tracking-title': 'No Tracking',
-                'priv-tracking-desc': 'We don\'t collect analytics, usage data, or any personal information. What you shoot stays between you and your camera.',
+                'priv-tracking-desc': 'No analytics or usage data collected. Your photos are yours alone.',
                 'download-title': 'Start Your Film Journey',
                 'download-subtitle': 'Now in Beta. Contact the author for early access.',
                 'download-note': 'Stay tuned — launching very soon.',
