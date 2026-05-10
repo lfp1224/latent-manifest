@@ -265,9 +265,7 @@
         const i18n = {
             'zh-CN': {
                 'page-title': 'LATN FILM & MNFS FILM - 完整模拟胶片摄影的体验',
-                'hero-title-main': '完整的胶片摄影数字体验',
-                'hero-subtitle': '潜影 · 显影',
-                'hero-tagline': 'TWO APPS. ONE DARKROOM.',
+                'hero-title-main': '完整模拟胶片摄影的体验',
                 'label-philosophy': '设计理念',
                 'latn-role': '胶片相机',
                 'mnfs-role': '数字暗房',
@@ -277,8 +275,6 @@
                 'phil-develop-desc': '一卷胶卷可以拍任何主题——光影、雨天、街猫、咖啡馆、旅行，收集生活的各种瞬间。',
                 'phil-anticipation-title': '仪式感与惊喜',
                 'phil-anticipation-desc': '当照片在暗房中缓缓显现，充满仪式感。精心设计的看片台，可以放大欣赏每一张照片的光影细节。',
-                'feat-subscription-title': '无限胶卷',
-                'feat-subscription-desc': '超值年费订阅，无限胶卷，无隐藏收费',
                 'label-workflow': '拍摄和冲洗',
                 'wf-step1-title': '装入胶卷',
                 'wf-step1-desc': '在 LATN 新建胶卷，选择 1:1 方幅或 2:3 经典画幅。',
@@ -290,16 +286,11 @@
                 'privacy-learn-more': '了解更多 →',
                 'priv-title': '隐私第一',
                 'priv-desc': '所有数据本地存储，无需账户，不追踪。你的照片只属于你。',
-                'download-title': '开始你的胶片之旅',
-                'download-subtitle': '',
-                'download-note': '敬请期待——即将发布。',
-                'footer-text': '胶片摄影系统',
-                'alert-message': '敬请期待！\nComing Soon...'
+                'download-title': '开始你的胶片之旅'
             },
             'en': {
                 'page-title': 'LATN FILM & MNFS FILM - Complete Film Emulation',
                 'hero-title-main': 'Complete Film Emulation',
-                'hero-tagline': 'TWO APPS. ONE DARKROOM.',
                 'label-philosophy': 'THE PHILOSOPHY',
                 'latn-role': 'Film Camera',
                 'mnfs-role': 'Digital Darkroom',
@@ -309,8 +300,6 @@
                 'phil-develop-desc': 'A roll can be about any subject — light and shadow, rainy days, street cats, coffee shops, travel. Collecting the little moments of life.',
                 'phil-anticipation-title': 'Ritual & Surprise',
                 'phil-anticipation-desc': 'As photos slowly emerge in the darkroom, the moment is full of ritual. The carefully designed light table lets you zoom in and appreciate the light and shadow details of every photo.',
-                'feat-subscription-title': 'Unlimited Rolls',
-                'feat-subscription-desc': 'One affordable yearly plan. No hidden fees, no limits.',
                 'label-workflow': 'SHOOT & DEVELOP',
                 'wf-step1-title': 'LOAD FILM',
                 'wf-step1-desc': 'Create a roll in LATN. Choose 1:1 square or 2:3 classic format.',
@@ -322,11 +311,7 @@
                 'privacy-learn-more': 'Learn More →',
                 'priv-title': 'PRIVACY FIRST',
                 'priv-desc': 'All data stays local. No account, no tracking. Your photos are yours alone.',
-                'download-title': 'Start Your Film Journey',
-                'download-subtitle': 'Now in Beta. Contact the author for early access.',
-                'download-note': 'Stay tuned — launching very soon.',
-                'footer-text': 'Analog Photography System',
-                'alert-message': 'Coming Soon...'
+                'download-title': 'Start Your Film Journey'
             }
         };
 
@@ -355,12 +340,6 @@
         }
 
         applyLanguage();
-
-        function showComingSoonAlert() {
-            const userLang = navigator.language || navigator.userLanguage;
-            const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
-            alert(i18n[lang]['alert-message']);
-        }
 
         // 微信环境检测与提示
         (function() {
